@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "wypozyczalniaDB2", "wypozyczalniaDB2.sqlproj", "{89FFFF5F-7332-4668-9EB2-F25103714B52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89FFFF5F-7332-4668-9EB2-F25103714B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FFFF5F-7332-4668-9EB2-F25103714B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FFFF5F-7332-4668-9EB2-F25103714B52}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{89FFFF5F-7332-4668-9EB2-F25103714B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FFFF5F-7332-4668-9EB2-F25103714B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FFFF5F-7332-4668-9EB2-F25103714B52}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BA47E2A-53A4-42D7-B685-7BC68658DFFF}
+	EndGlobalSection
+EndGlobal

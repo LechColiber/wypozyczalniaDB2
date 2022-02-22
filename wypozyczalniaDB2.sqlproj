@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>wypozyczalniaDB2</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{89ffff5f-7332-4668-9eb2-f25103714b52}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>wypozyczalniaDB2</RootNamespace>
+    <AssemblyName>wypozyczalniaDB2</AssemblyName>
+    <ModelCollation>1045,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Polish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\w2_adresy.sql" />
+    <Build Include="dbo\Tables\pracow.sql" />
+    <Build Include="dbo\Tables\w2_cenniki.sql" />
+    <Build Include="dbo\Tables\w2_grupy_u.sql" />
+    <Build Include="dbo\Tables\w2_pracownicy.sql" />
+    <Build Include="dbo\Tables\w2_grupy_z.sql" />
+    <Build Include="dbo\Tables\w2_konfig.sql" />
+    <Build Include="dbo\Tables\w2_pozycje_cennika.sql" />
+    <Build Include="dbo\Tables\w2_teleadresy.sql" />
+    <Build Include="dbo\Tables\w2_prawa_grupy_u.sql" />
+    <Build Include="dbo\Tables\w2_prawa_grupy_z.sql" />
+    <Build Include="dbo\Tables\w2_prawa.sql" />
+    <Build Include="dbo\Tables\w2_rozliczenia.sql" />
+    <Build Include="dbo\Tables\w2_uzytkownicy.sql" />
+    <Build Include="dbo\Tables\w2_typy_adresu.sql" />
+    <Build Include="dbo\Tables\w2_typy_teleadresu.sql" />
+    <Build Include="dbo\Tables\w2_typy_uzytk.sql" />
+    <Build Include="dbo\Tables\w2_typy_wyp.sql" />
+    <Build Include="dbo\Tables\w2_uprawnienia_z.sql" />
+    <Build Include="dbo\Tables\w2_uprawnienia_u.sql" />
+    <Build Include="dbo\Tables\w2_wersja.sql" />
+    <Build Include="dbo\Tables\w2_upomnienia.sql" />
+    <Build Include="dbo\Tables\w2_zasoby_grupa.sql" />
+    <Build Include="dbo\Tables\w2_zasoby_t.sql" />
+    <Build Include="dbo\Tables\w2_zmiany_schemy.sql" />
+    <Build Include="dbo\Tables\WYPOZYCZ.sql" />
+    <Build Include="dbo\Tables\w2_zamowienia.sql" />
+    <Build Include="dbo\Tables\w2_wypozyczenia.sql" />
+    <Build Include="dbo\Views\w2v_uprawnienia_z.sql" />
+    <Build Include="dbo\Views\w2_zasoby.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\w2v_zasoby.sql" />
+    <Build Include="dbo\Views\w2v_zamowione.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\v_wypozyczone.sql" />
+    <Build Include="dbo\Views\v_adresy.sql" />
+    <Build Include="dbo\Views\v_teleadresy.sql" />
+    <Build Include="dbo\Views\w2v_pozycje_cennika.sql" />
+    <Build Include="dbo\Views\w2v_pozycje_cennika_cnt.sql" />
+    <Build Include="dbo\Views\w2v_uprawnienia_u.sql" />
+    <Build Include="dbo\Views\w2v_uzytkownicy.sql" />
+    <Build Include="dbo\Views\w2v_wypozyczenia.sql" />
+    <Build Include="dbo\Views\w2v_zamowienia.sql" />
+    <Build Include="dbo\Views\w2v_zasoby_syg.sql" />
+    <Build Include="dbo\Views\v_wypozyczenia.sql" />
+    <Build Include="Security\coliber.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\w2_wypozyczenie_limit_czasu.sql" />
+    <Build Include="dbo\Functions\DateSerial.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Functions\DateTimeSerial.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Functions\LogInToDb.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_uzytkownikow_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_uzytkownikow_szczegoly.sql" />
+    <Build Include="dbo\Stored Procedures\w2_lista_grup.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_uzytkownikow_prawa_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_lista_praw.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_uzytkownikow_prawa_szczegoly.sql" />
+    <Build Include="dbo\Stored Procedures\w2_lista_typow_adresu.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_uzytkownikow_prawa_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_lista_typow_uzytkownikow.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_uzytkownikow_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_lista_uzytkownikow.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_uzytkownikow_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_przedluzenie.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wartosc_konfiguracyjna_n_edycja.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wartosc_konfiguracja_lista.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_zasoby_zwrocone.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_zasoby_niezwrocone_liczba.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_zasoby_niezwrocone.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_wyrejestruj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownicy_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_uprawnienie_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_adres_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_uprawnienie_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_adres_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_uprawnienie_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_adres_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_teleadresy.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_adresy.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_teleadres_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_teleadres_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_teleadres_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_uprawnienia.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownicy_grupy_liczby.sql" />
+    <Build Include="dbo\Stored Procedures\w2_prawa_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wartosc_konfiguracyjna.sql" />
+    <Build Include="dbo\Stored Procedures\w2_prawa_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wypozyczenia_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wypozyczenie.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="dbo\Stored Procedures\w2_grupa_zasobow_prawa_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wypozyczone.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wartosc_konfiguracyjna_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienia_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_szczegoly.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienie.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasoby_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zwrot.sql" />
+    <Build Include="dbo\Stored Procedures\w2_lista_typow_teleadresu.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zwrot_szczegoly.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zwroty_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienie_realizacja.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_zamowienia.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_uprawnienie_usun.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_uprawnienie_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_uprawnienie_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_uprawnienia.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_szczegoly.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_historia.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienie_rezygnuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownicy_podpowiedzi.sql" />
+    <Build Include="dbo\Stored Procedures\w2_szukaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_przez_sygnatura.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_przez_numer_inwentarzowy.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasob_przez_kod_kreskowy.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_przez_kod_kreskowy.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wartosc_konfiguracyjna_l_edycja.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_zamowienia.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wypozyczenie_szczegoly_przez_zasob_id.sql" />
+    <Build Include="dbo\Stored Procedures\w2_wartosc_konfiguracyjna_c_edycja.sql" />
+    <Build Include="dbo\Stored Procedures\w2_rewers.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_wypozyczenia_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_historia_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_upomnienie_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienia_lista.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienie_zmien_stan.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienia_ilosc.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_z_nazwa_domenowa.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownicy_wypozyczenia_raport.sql" />
+    <Build Include="dbo\Stored Procedures\w2_upomnienie_raport_wszyscy.sql" />
+    <Build Include="dbo\Stored Procedures\w2_raport_uzytkownikow.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_zasobow_lista.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownik_posiada_wypozyczony_zasob.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zwroty_raport_liczba.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zamowienia_raport_liczba.sql" />
+    <Build Include="dbo\Stored Procedures\w2_upomnienie_raport_wszyscy_liczba.sql" />
+    <Build Include="dbo\Stored Procedures\w2_uzytkownicy_wypozyczenia_raport_liczba.sql" />
+    <Build Include="dbo\Stored Procedures\w2_raport_uzytkownikow_liczba.sql" />
+    <Build Include="dbo\Stored Procedures\w2_zasoby_raport_liczba.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_zasobow_szczegoly.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_zasobow_prawa_szczegoly.sql" />
+    <Build Include="dbo\Stored Procedures\test.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\w2_grupa_zasobow_prawa_dodaj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_zasobow_edytuj.sql" />
+    <Build Include="dbo\Stored Procedures\w2_grupa_zasobow_dodaj.sql" />
+  </ItemGroup>
+</Project>
